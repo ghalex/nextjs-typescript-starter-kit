@@ -1,0 +1,39 @@
+{
+  "env": {
+    "development": {
+      "presets": ["next/babel"],
+      "plugins": [
+        [
+          "babel-plugin-root-import",
+          {
+            "paths": [
+              {
+                "rootPathSuffix": "./src",
+                "rootPathPrefix": "~/"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": ["next/babel"],
+      "plugins": [
+        [
+          "babel-plugin-root-import",
+          {
+            "paths": [
+              {
+                "rootPathSuffix": "./src",
+                "rootPathPrefix": "~/"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": [["next/babel", { "preset-env": { "modules": "commonjs" } }]]
+    }
+  }
+}
